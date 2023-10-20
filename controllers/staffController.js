@@ -5,7 +5,7 @@ const asyncHandler = require("express-async-handler");
 exports.staff_listing = asyncHandler(async (req, res, next) => {
 
   const staff_list = await db
-    .query("SELECT * FROM staff")
+    .query("SELECT first_name, last_name, staff_id, staff_role FROM staff")
     .then((response) => {
       console.log(response);
       res.render("staff", {
