@@ -7,8 +7,9 @@ block content
   ul
     each staff in staff_list
       li
-        a(href=#) #{staff.staff_role}
-        |  (#{staff.first_name} #{staff.last_name})
+        |  #{staff.first_name} #{staff.last_name},  
+        |  (#{staff.staff_role}) - 
+        a(href=staff.staff_id) Detailed Info
 
     else
       li There are no staffs.
