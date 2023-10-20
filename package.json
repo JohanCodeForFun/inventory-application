@@ -4,18 +4,26 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
+    "test": "mocha --recursive --timeout 10000 --exit",
     "devstart": "nodemon ./bin/www",
     "serverstart": "DEBUG=express-locallibrary-tutorial:* npm run devstart"
   },
   "dependencies": {
+    "async-handler": "^0.0.3",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
+    "express-async-handler": "^1.2.0",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
+    "pg-promise": "^11.5.4",
     "pug": "^3.0.2"
   },
   "devDependencies": {
-    "nodemon": "^3.0.1"
+    "chai": "^4.3.10",
+    "mocha": "^10.2.0",
+    "nodemon": "^3.0.1",
+    "supertest": "^6.3.3"
   }
 }
